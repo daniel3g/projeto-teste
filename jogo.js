@@ -16,11 +16,19 @@ number2 = number[1];
 number3 = number[2];
 number4 = number[3];
 
-const btn = document.querySelector("#button-send");
 
-btn.addEventListener("click", function(e) {
+//const btn = document.querySelector("#button-send");
+
+document.addEventListener("keypress", function(e) {
+    if(e.key === 'Enter') {
+  
+        var btn = document.querySelector("#button-send");
+      
+      btn.click();
 
     e.preventDefault();
+
+    var comparar = number;
 
     var input = document.querySelector("#input-palpite");
     var palpiteInput = input.value;
@@ -29,55 +37,42 @@ btn.addEventListener("click", function(e) {
         return Number(palpiteInput);
       });
     
-    //console.log(palpite);
-    console.log(number);
+    console.log(palpite);
+    //console.log(number);
+    //console.log(comparar);
 
     palpite1 = palpite[0];
     palpite2 = palpite[1];
     palpite3 = palpite[2];
     palpite4 = palpite[3];
 
-    if(number1 === palpite1){
-        //acertos.push(1);
-        //number.splice(0, 1);
-        //palpite.splice(0, 1);
-    }
-
-    if(number2 === palpite2){
-       // acertos.push(1);
-        //number.splice(1, 1);
-        //palpite.splice(1, 1);
-    }
-
-    if(number3 === palpite3){
-        //acertos.push(1);
-        //number.splice(2, 1);
-        //palpite.splice(2, 1);
-    }
-
-    if(number4 === palpite4){
-        //acertos.push(1);
-        //number.pop();
-        //palpite.pop();
-    }
-
     for (var i=0; i < number.length; i++){
         for (var j=0; j < number.length; j++){
-            if((number[i] === palpite[j]) && (i === j)){
+            if((comparar[i] === palpite[j]) && (i === j)){
                 acertos.push(1);
-            }else if((number[i] === palpite[j]) && (i != j)){
+                
+            }else if((comparar[i] === palpite[j]) && (i != j)){
                 acertos.push(0);
+                
             }
         }
     }
 
+         
+
     if (acertos[0] === 1 && acertos[1] === 1 && acertos[2] === 1 && acertos[3] === 1){
         console.log("Você acertou");
     }else{
+        acertos.sort((a, b) => b - a);
+        let list = document.getElementById("list").innerHTML;
+        list += "<li>" +palpite+ "|||" +acertos+ "</li>";
+        document.getElementById("list").innerHTML = list;
+        //var element = document.getElementById('element');
+        //element.innerHTML = `${palpite}`;
         console.log(acertos);
         acertos = [];
     }
-
+    }
     
 });
 
