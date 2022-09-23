@@ -28,7 +28,11 @@ document.addEventListener("keypress", function(e) {
 
     e.preventDefault();
 
-    var comparar = number;
+    var comparar = [];
+    comparar[0] = number[0];
+    comparar[1] = number[1];
+    comparar[2] = number[2];
+    comparar[3] = number[3];
 
     var input = document.querySelector("#input-palpite");
     var palpiteInput = input.value;
@@ -61,6 +65,13 @@ document.addEventListener("keypress", function(e) {
             }
         }
     }
+
+    comparar[0] = number[0];
+    comparar[1] = number[1];
+    comparar[2] = number[2];
+    comparar[3] = number[3];
+
+        console.log("comparar |||", comparar);
 
 
 
