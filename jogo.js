@@ -51,16 +51,18 @@ document.addEventListener("keypress", function(e) {
             if((palpite[i] === comparar[j]) && (i === j)){
                 acertos.push(1);
                 console.log("vetor",i+1,j+1);
-                
+                comparar[j] = -1;
                 
                 
             }else if((palpite[i] === comparar[j]) && (i != j)){
                 acertos.push(0);
                 console.log("vetor",i+1,j+1);
-                
+                comparar[j] = -1;
             }
         }
     }
+
+
 
     let list = document.getElementById("list").innerHTML;     
 
