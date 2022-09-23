@@ -48,13 +48,16 @@ document.addEventListener("keypress", function(e) {
 
     for (var i=0; i < number.length; i++){
         for (var j=0; j < number.length; j++){
-            if((comparar[i] === palpite[j]) && (i === j)){
+            if((palpite[i] === comparar[j]) && (i === j)){
                 acertos.push(1);
-                break;
+                console.log("vetor",i+1,j+1);
                 
-            }else if((comparar[i] === palpite[j]) && (i != j)){
+                
+                
+            }else if((palpite[i] === comparar[j]) && (i != j)){
                 acertos.push(0);
-                break;
+                console.log("vetor",i+1,j+1);
+                
             }
         }
     }
@@ -62,7 +65,7 @@ document.addEventListener("keypress", function(e) {
     let list = document.getElementById("list").innerHTML;     
 
     if (acertos[0] === 1 && acertos[1] === 1 && acertos[2] === 1 && acertos[3] === 1){
-        list += "<li>Parabéns! Você acertou.</li>";
+        list += "<li>" +"Parabéns! Você acertou o número era: "+randomNaumber+"</li>";
         document.getElementById("list").innerHTML = list;
     }else{
         acertos.sort((a, b) => b - a);
