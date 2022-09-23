@@ -38,7 +38,7 @@ document.addEventListener("keypress", function(e) {
       });
     
     console.log(palpite);
-    //console.log(number);
+    console.log(number);
     //console.log(comparar);
 
     palpite1 = palpite[0];
@@ -50,21 +50,23 @@ document.addEventListener("keypress", function(e) {
         for (var j=0; j < number.length; j++){
             if((comparar[i] === palpite[j]) && (i === j)){
                 acertos.push(1);
+                break;
                 
             }else if((comparar[i] === palpite[j]) && (i != j)){
                 acertos.push(0);
-                
+                break;
             }
         }
     }
 
-         
+    let list = document.getElementById("list").innerHTML;     
 
     if (acertos[0] === 1 && acertos[1] === 1 && acertos[2] === 1 && acertos[3] === 1){
-        console.log("Você acertou");
+        list += "<li>Parabéns! Você acertou.</li>";
+        document.getElementById("list").innerHTML = list;
     }else{
         acertos.sort((a, b) => b - a);
-        let list = document.getElementById("list").innerHTML;
+        
         list += "<li>" +palpite+ "|||" +acertos+ "</li>";
         document.getElementById("list").innerHTML = list;
         //var element = document.getElementById('element');
