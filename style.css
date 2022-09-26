@@ -9,3 +9,29 @@ form {
     border: 1px solid #999;
     border-radius: 6px;
 }
+
+li   {
+    list-style-type: none;
+}
+
+.resultado {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#palpite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #d3d3d3;
+}
+
+#dica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background-color: #9e9e9e;
+}
