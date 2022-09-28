@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,14 +11,15 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url(assets/images/back-ground.png);
+    font-family: 'Press Start 2P', cursive;
 }
 
 .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 70vw;
     height: 100vh;
-    border: 2px solid #fff;
 }
 
 .displays {
@@ -28,19 +31,37 @@ body {
 }
 
 .display-top {
-    width: 726px;
-    height: 423px;
+    display: flex;
+    flex-direction: column;
+    width: 508px;
+    height: 296px;
     background-image: url(assets/images/back-ground-display-top.png);
     background-repeat: no-repeat;
     background-size: contain;
+    padding: 30px;
 }
 
 .display-bottom {
-    width: 570px;
-    height: 406px;
+    display: flex;
+    flex-direction: column;
+    width: 399px;
+    height: 284px;
     background-image: url(assets/images/back-ground-display-bottom.png);
     background-repeat: no-repeat;
     background-size: contain;
+    padding: 30px 40px;
+}
+
+.display-bottom h2 {
+    font-size: 18px;
+    color: #005000;
+    margin-bottom: 12px;
+}
+
+.display-bottom p {
+    font-size: 10px;
+    color: #d9d9d9;
+    line-height: 1.4;
 }
 
 li   {
@@ -58,7 +79,35 @@ li   {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    background-color: #d3d3d3;
+    background-color: rgba(0, 0, 0, 0);
+    color: #005000;
+}
+
+#input-palpite {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #005000;
+    font-family: 'Press Start 2P', cursive;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+::-webkit-input-placeholder {
+    font-family: 'Press Start 2P', cursive;
+    color: #005000
 }
 
 #dica {
@@ -66,5 +115,33 @@ li   {
     flex-direction: column;
     align-items: center;
     width: 50%;
-    background-color: #9e9e9e;
+    background-color: rgba(0, 0, 0, 0);
+    color: #005000;
+}
+
+#button-send {
+    display: none;
+}
+
+.displays-right {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(assets/images/back-ground-button.png);
+    width: 402px;
+    height: 93px;
+    color: #d9d9d9;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+span {
+    margin: 10px 0 0 15px;
 }

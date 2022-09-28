@@ -20,6 +20,7 @@ document.addEventListener("keypress", function(e) {
 
     e.preventDefault();
 
+    
     var comparar = [];
     comparar[0] = number[0];
     comparar[1] = number[1];
@@ -28,6 +29,8 @@ document.addEventListener("keypress", function(e) {
 
     var input = document.querySelector("#input-palpite");
     var palpiteInput = input.value;
+    document.getElementById('input-palpite').value='';
+
 
     var palpite = String(palpiteInput).split("").map((palpiteInput)=>{
         return Number(palpiteInput);
