@@ -96,6 +96,9 @@ document.addEventListener("keypress", function(e) {
         document.getElementById("dica").innerHTML = list2;
         console.log(acertos);
         acertos = [];
+
+        var objDiv = document.getElementById("div_chat");
+        objDiv.scrollTop = objDiv.scrollHeight;
     }
     }
     
