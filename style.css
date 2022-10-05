@@ -175,6 +175,9 @@ span {
 }
 
 @media (max-width: 600px) {
+    .container {
+        width: 400px;
+    }
     .display-top {
         width: 380px;
         height: 222px;
@@ -183,6 +186,14 @@ span {
     .scroll {
         width: 338px;
         height: 188px;
+    }
+
+    .scroll li {
+        font-size: 11px;
+    }
+
+    .scroll span {
+        font-size: 13px;
     }
 
     .display-bottom {

@@ -91,7 +91,7 @@ document.addEventListener("keypress", function(e) {
 
         
         list += "<li>" + palpiteExibir + "</li>";
-        list2 += "<li>" + acertosExibir + "</li>";
+        list2 += "<li><span>" + acertosExibir + "</span></li>";
         document.getElementById("palpite").innerHTML = list;
         document.getElementById("dica").innerHTML = list2;
         console.log(acertos);
